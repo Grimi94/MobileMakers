@@ -32,7 +32,9 @@
     [super viewDidLoad];
     filteredArray = [NSMutableArray arrayWithCapacity:30];
     [filteredArray removeAllObjects];
-    
+    [outsourceArray enumerateObjectsUsingBlock:^(NSString* obj, NSUInteger idx, BOOL *stop) {
+        
+    }];
     [outsourceArray enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger index, BOOL *stop){
         if([identifierView isEqualToString:@"toOdds"])
         {
