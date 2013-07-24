@@ -53,6 +53,12 @@
 {
     NSLog(@"Keys: %@",[dictionary allKeys]);
     NSLog(@"Values:%@",[dictionary allValues]);
+    
+    [coolDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if ([obj isKindOfClass:[Person class]]) {
+            NSLog(@"NAme: %@ %@",((Person*)obj).firstName,((Person*)obj).firstName);
+        }
+    }];
 }
 
 
