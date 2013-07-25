@@ -32,9 +32,9 @@
     
     personOne.firstName = @"Don";
     personOne.lastName = @"Popo";
-    personTwo.lastName = @"Andres";
+    personTwo.firstName = @"Andres";
     personTwo.lastName = @"Benger";
-    personThree.lastName = @"Eddie";
+    personThree.firstName = @"Eddie";
     personThree.lastName = @"Benger";
     
     [people addObject:personTwo];
@@ -56,7 +56,14 @@
     
     [coolDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         if ([obj isKindOfClass:[Person class]]) {
-            NSLog(@"NAme: %@ %@",((Person*)obj).firstName,((Person*)obj).firstName);
+            NSLog(@"NAme: %@ %@",((Person*)obj).firstName,((Person*)obj).lastName);
+        }
+        else if ([obj isKindOfClass:[NSArray class]])
+        {
+            NSArray * temp = (NSArray*)obj;
+            [temp enumerateObjectsUsingBlock:^(id value, NSUInteger idx, BOOL *stop) {
+                NSLog(@"Nane: %@ %@",((Person*)value).firstName,((Person*)value).lastName);
+            }];
         }
     }];
 }
