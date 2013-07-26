@@ -60,7 +60,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Hero"];
     }
-    
+
     cell.textLabel.text = [superHeroDictionary objectForKey:@"name"];
     cell.detailTextLabel.text = [superHeroDictionary objectForKey:@"description"];
     cell.imageView.image = image;
