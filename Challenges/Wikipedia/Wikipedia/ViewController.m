@@ -74,9 +74,11 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * response, NSData * data, NSError * error) {
         
         searchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        
         //NSLog(@"Dictionary %@",searchDictionary);
         [tableOutlet reloadData];
     }];
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

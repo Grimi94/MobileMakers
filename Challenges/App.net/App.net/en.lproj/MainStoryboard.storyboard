@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gkj-WW-tQW">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zsB-Ks-1yi">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="2lI-s9-Psa"/>
+                                    <outlet property="delegate" destination="2" id="7LK-Tn-DVP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zsB-Ks-1yi" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Fuz-eN-5J1"/>
+                            <constraint firstItem="zsB-Ks-1yi" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="K2w-FE-mAW"/>
+                            <constraint firstItem="zsB-Ks-1yi" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="KlN-QJ-Abi"/>
+                            <constraint firstItem="zsB-Ks-1yi" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="bOP-7B-l0r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WZv-rY-48l"/>
+                    <connections>
+                        <outlet property="appNetTableView" destination="zsB-Ks-1yi" id="qnU-TK-s6V"/>
+                        <segue destination="vY2-bf-uJp" kind="push" identifier="toUserPosts" id="OXp-22-3Yk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="52"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="29a-d6-4uq">
+            <objects>
+                <viewController id="vY2-bf-uJp" customClass="UserViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgg-Vo-XGD">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T13-BK-aQE">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="404" id="cev-fe-iuq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="vY2-bf-uJp" id="Lw6-l8-KKH"/>
+                                    <outlet property="delegate" destination="vY2-bf-uJp" id="gJk-gY-qol"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQp-ro-N85">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5YL-us-rmO"/>
+                                    <constraint firstAttribute="width" constant="60" id="kTN-Yx-aZX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHE-ka-UAd">
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TvW-jI-7DA"/>
+                                    <constraint firstAttribute="width" constant="50" id="ge7-kE-ppd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T13-BK-aQE" firstAttribute="bottom" secondItem="fgg-Vo-XGD" secondAttribute="bottom" type="default" id="Ufz-hk-8s8"/>
+                            <constraint firstItem="T13-BK-aQE" firstAttribute="leading" secondItem="fgg-Vo-XGD" secondAttribute="leading" type="default" id="Z5N-Zo-UIW"/>
+                            <constraint firstItem="EQp-ro-N85" firstAttribute="top" secondItem="fgg-Vo-XGD" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Zp1-OV-cuF"/>
+                            <constraint firstItem="EQp-ro-N85" firstAttribute="centerX" secondItem="XHE-ka-UAd" secondAttribute="centerX" type="default" id="iXR-yf-hSi"/>
+                            <constraint firstItem="EQp-ro-N85" firstAttribute="leading" secondItem="fgg-Vo-XGD" secondAttribute="leading" constant="18" id="krD-2G-8nj"/>
+                            <constraint firstItem="XHE-ka-UAd" firstAttribute="centerY" secondItem="EQp-ro-N85" secondAttribute="centerY" type="default" id="vj9-Tm-9VR"/>
+                            <constraint firstItem="T13-BK-aQE" firstAttribute="trailing" secondItem="fgg-Vo-XGD" secondAttribute="trailing" type="default" id="z8Y-Ih-ffR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mdp-sq-11I"/>
+                    <connections>
+                        <outlet property="userTableView" destination="T13-BK-aQE" id="RyV-E5-XOJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZZ-cF-GWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hh4-s7-Wff">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gkj-WW-tQW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Gx-pU-86O">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="xGR-OB-GNr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCX-Zn-Qz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-392" y="52"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UserViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="userTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="appNetTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
