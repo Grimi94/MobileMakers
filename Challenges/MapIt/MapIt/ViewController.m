@@ -55,6 +55,7 @@
 
 -(IBAction)viewTapped:(UIGestureRecognizer*)sender
 {
+        [self.view endEditing:YES];
     if (!searchBarHidden) {
         [UIView animateWithDuration:0.4
                          animations:^{
@@ -81,9 +82,9 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [searchBar resignFirstResponder];
-    [searchBar endEditing:YES];
+
     NSURL * url = [NSURL URLWithString: [[NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false",searchBar.text]stringByReplacingOccurrencesOfString:@" " withString:@"+"]];
-    NSLog(@"%@",url);
+  //  NSLog(@"%@",url);
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * response, NSData * data, NSError * error) {
