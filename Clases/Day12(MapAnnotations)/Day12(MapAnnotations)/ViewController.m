@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AcademyAnnotation.h"
 
 @interface ViewController ()
 {
@@ -24,12 +25,20 @@
     MKCoordinateRegion region;
     CLLocationCoordinate2D coordinate;
     MKCoordinateSpan span;
+    AcademyAnnotation * academyLocation;
+    academyLocation = [[AcademyAnnotation alloc] init];
     
     span = MKCoordinateSpanMake(1, 1);
     coordinate = CLLocationCoordinate2DMake(41.90, -87.65);
     region = MKCoordinateRegionMake(coordinate, span);
     
+    
     [mapView setRegion:region];
+    
+    academyLocation.title = @"Mobile Makers";
+    academyLocation.coordinate = coordinate;
+    
+    [mapView addAnnotation:academyLocation];
 
 }
 
@@ -37,6 +46,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(MKAnnotationView*)mapView:(MKMapView *)_mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    MKAnnotationView* annotationView = [_mapView dequeueReusableAnnotationViewWithIdentifier:@"AnnotationIdentifier"];
+    if (!annotationView) {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"AnnotationIdentifier"];
+        annotationView.canShowCallout = YES;
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    }
+    else
+        annotationView.annotation = annotation;
+    
+    return annotationView;
+}
+
+-(void) mapView:(MKMapView *)_mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    NSLog(@"Im Here %@",view.annotation.title);
 }
 
 @end

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lme-ep-pRV" customClass="ColorPanel">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usn-PN-8tv" customClass="ColorPanel">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfR-IE-9sw" customClass="ColorPanel">
+                                <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9n-Lo-Sbh" customClass="ColorPanel">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUT-mu-Q83" customClass="ColorPanel">
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.9137254901960784" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-rX-Vhp" customClass="ColorPanel">
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-oP-jK3">
+                                <color key="backgroundColor" red="0.20326756386861314" green="0.83200273722627738" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="FCN-Aq-PC6"/>
+                                    <constraint firstAttribute="height" constant="80" id="KKw-O4-cUN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Play">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="16" name="STHeitiTC-Light"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="generateAndFlash:" destination="2" eventType="touchUpInside" id="r4e-EN-OHW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vUT-mu-Q83" firstAttribute="leading" secondItem="lme-ep-pRV" secondAttribute="leading" type="default" id="4jv-Sv-rJ7"/>
+                            <constraint firstAttribute="bottom" secondItem="lme-ep-pRV" secondAttribute="bottom" constant="285" id="7J6-qD-fVX"/>
+                            <constraint firstItem="0KL-oP-jK3" firstAttribute="leading" secondItem="usn-PN-8tv" secondAttribute="leading" type="default" id="J2d-AD-Q3S"/>
+                            <constraint firstItem="lme-ep-pRV" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="12" id="Jo3-1L-P6t"/>
+                            <constraint firstItem="usn-PN-8tv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="103" id="KjW-9M-iEq"/>
+                            <constraint firstItem="0KL-oP-jK3" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="Nc6-jX-DNj"/>
+                            <constraint firstItem="nfR-IE-9sw" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="OX4-vB-nH4"/>
+                            <constraint firstItem="P9n-Lo-Sbh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="218" id="PY0-yN-aAJ"/>
+                            <constraint firstAttribute="trailing" secondItem="lme-ep-pRV" secondAttribute="trailing" constant="218" id="T4h-gt-3k3"/>
+                            <constraint firstItem="nfR-IE-9sw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="355" id="TOZ-f6-xgC"/>
+                            <constraint firstItem="cmR-rX-Vhp" firstAttribute="leading" secondItem="P9n-Lo-Sbh" secondAttribute="leading" type="default" id="Xfi-Ut-Ng2"/>
+                            <constraint firstAttribute="bottom" secondItem="usn-PN-8tv" secondAttribute="bottom" constant="355" id="Yue-gi-zK0"/>
+                            <constraint firstItem="nfR-IE-9sw" firstAttribute="trailing" secondItem="usn-PN-8tv" secondAttribute="trailing" type="default" id="Z7v-0p-XX4"/>
+                            <constraint firstItem="lme-ep-pRV" firstAttribute="top" secondItem="P9n-Lo-Sbh" secondAttribute="top" type="default" id="bWf-Ok-law"/>
+                            <constraint firstAttribute="bottom" secondItem="vUT-mu-Q83" secondAttribute="bottom" constant="165" id="btc-WE-9zQ"/>
+                            <constraint firstItem="lme-ep-pRV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="173" id="c1G-Gz-eFS"/>
+                            <constraint firstItem="cmR-rX-Vhp" firstAttribute="bottom" secondItem="vUT-mu-Q83" secondAttribute="bottom" type="default" id="gRP-tq-DR9"/>
+                            <constraint firstItem="cmR-rX-Vhp" firstAttribute="top" secondItem="vUT-mu-Q83" secondAttribute="top" type="default" id="gre-lb-SW1"/>
+                            <constraint firstAttribute="bottom" secondItem="nfR-IE-9sw" secondAttribute="bottom" constant="103" id="j67-qw-Pqd"/>
+                            <constraint firstItem="vUT-mu-Q83" firstAttribute="top" secondItem="3" secondAttribute="top" constant="293" id="m3u-kE-LZX"/>
+                            <constraint firstAttribute="trailing" secondItem="P9n-Lo-Sbh" secondAttribute="trailing" constant="12" id="oJC-rU-Fjc"/>
+                            <constraint firstItem="lme-ep-pRV" firstAttribute="bottom" secondItem="P9n-Lo-Sbh" secondAttribute="bottom" type="default" id="sBr-Bp-mgy"/>
+                            <constraint firstItem="cmR-rX-Vhp" firstAttribute="trailing" secondItem="P9n-Lo-Sbh" secondAttribute="trailing" type="default" id="sH1-S4-dVN"/>
+                            <constraint firstItem="usn-PN-8tv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="115" id="uGM-GU-CPb"/>
+                            <constraint firstItem="vUT-mu-Q83" firstAttribute="trailing" secondItem="lme-ep-pRV" secondAttribute="trailing" type="default" id="xM9-YV-6JU"/>
+                            <constraint firstItem="0KL-oP-jK3" firstAttribute="leading" secondItem="nfR-IE-9sw" secondAttribute="leading" type="default" id="xaR-8u-pv5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="0KL-oP-jK3" id="fvy-AB-TrB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152" y="70"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

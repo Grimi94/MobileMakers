@@ -20,6 +20,8 @@
 		8204B60217A80706009DAE26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8204B60117A80706009DAE26 /* ViewController.m */; };
 		8204B60917A80760009DAE26 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8204B60817A80760009DAE26 /* MapKit.framework */; };
 		8204B60B17A80766009DAE26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8204B60A17A80766009DAE26 /* CoreLocation.framework */; };
+		8204B61117A80FB8009DAE26 /* AcademyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8204B61017A80FB8009DAE26 /* AcademyAnnotation.m */; };
+		8204B61417A81E23009DAE26 /* MobileMakersAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8204B61317A81E22009DAE26 /* MobileMakersAnnotationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		8204B60117A80706009DAE26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8204B60817A80760009DAE26 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8204B60A17A80766009DAE26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8204B60F17A80FB8009DAE26 /* AcademyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademyAnnotation.h; sourceTree = "<group>"; };
+		8204B61017A80FB8009DAE26 /* AcademyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcademyAnnotation.m; sourceTree = "<group>"; };
+		8204B61217A81E22009DAE26 /* MobileMakersAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileMakersAnnotationView.h; sourceTree = "<group>"; };
+		8204B61317A81E22009DAE26 /* MobileMakersAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileMakersAnnotationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,10 @@
 				8204B5FD17A80706009DAE26 /* MainStoryboard.storyboard */,
 				8204B60017A80706009DAE26 /* ViewController.h */,
 				8204B60117A80706009DAE26 /* ViewController.m */,
+				8204B60F17A80FB8009DAE26 /* AcademyAnnotation.h */,
+				8204B61017A80FB8009DAE26 /* AcademyAnnotation.m */,
+				8204B61217A81E22009DAE26 /* MobileMakersAnnotationView.h */,
+				8204B61317A81E22009DAE26 /* MobileMakersAnnotationView.m */,
 				8204B5EC17A80706009DAE26 /* Supporting Files */,
 			);
 			path = "Day12(MapAnnotations)";
@@ -184,6 +194,8 @@
 				8204B5F217A80706009DAE26 /* main.m in Sources */,
 				8204B5F617A80706009DAE26 /* AppDelegate.m in Sources */,
 				8204B60217A80706009DAE26 /* ViewController.m in Sources */,
+				8204B61117A80FB8009DAE26 /* AcademyAnnotation.m in Sources */,
+				8204B61417A81E23009DAE26 /* MobileMakersAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

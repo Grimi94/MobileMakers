@@ -20,6 +20,7 @@
 		8204B5CF17A6D92E009DAE26 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8204B5CD17A6D92E009DAE26 /* ViewController.xib */; };
 		8204B5D617A6DA68009DAE26 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8204B5D517A6DA68009DAE26 /* MapKit.framework */; };
 		8204B5D817A6DA6E009DAE26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8204B5D717A6DA6E009DAE26 /* CoreLocation.framework */; };
+		8204B60E17A80F55009DAE26 /* AcademyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8204B60D17A80F55009DAE26 /* AcademyAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		8204B5CE17A6D92E009DAE26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		8204B5D517A6DA68009DAE26 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8204B5D717A6DA6E009DAE26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8204B60C17A80F55009DAE26 /* AcademyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademyAnnotation.h; sourceTree = "<group>"; };
+		8204B60D17A80F55009DAE26 /* AcademyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcademyAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				8204B5CA17A6D92E009DAE26 /* ViewController.h */,
 				8204B5CB17A6D92E009DAE26 /* ViewController.m */,
 				8204B5CD17A6D92E009DAE26 /* ViewController.xib */,
+				8204B60C17A80F55009DAE26 /* AcademyAnnotation.h */,
+				8204B60D17A80F55009DAE26 /* AcademyAnnotation.m */,
 				8204B5B917A6D92E009DAE26 /* Supporting Files */,
 			);
 			path = MapIt;
@@ -184,6 +189,7 @@
 				8204B5BF17A6D92E009DAE26 /* main.m in Sources */,
 				8204B5C317A6D92E009DAE26 /* AppDelegate.m in Sources */,
 				8204B5CC17A6D92E009DAE26 /* ViewController.m in Sources */,
+				8204B60E17A80F55009DAE26 /* AcademyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +312,7 @@
 				8204B5D417A6D92E009DAE26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
