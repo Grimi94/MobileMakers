@@ -10,6 +10,6 @@
 
 @protocol ColorPanelDelegate <NSObject>
 
--(void) returnTag:(int)tag;
+-(void) returnTagAndSaveTouch:(int)tag;
 
 @end

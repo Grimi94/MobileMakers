@@ -30,7 +30,7 @@
                             <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-rX-Vhp" customClass="ColorPanel">
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-oP-jK3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-oP-jK3" customClass="PlayButton">
                                 <color key="backgroundColor" red="0.20326756386861314" green="0.83200273722627738" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="FCN-Aq-PC6"/>
@@ -51,38 +51,95 @@
                                     <action selector="generateAndFlash:" destination="2" eventType="touchUpInside" id="r4e-EN-OHW"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeY-Qh-ydi">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LrC-yi-kca" customClass="PlayButton">
+                                        <color key="backgroundColor" red="0.2032675639" green="0.83200273719999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="83" id="EDB-T1-T7x"/>
+                                            <constraint firstAttribute="height" constant="80" id="VJH-Ns-tCP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Play Again">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="STHeitiTC-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetGame:" destination="2" eventType="touchUpInside" id="8ax-Dd-20k"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Whops!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWN-Jd-iEO">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="142" id="Sgg-dL-khj"/>
+                                            <constraint firstAttribute="height" constant="80" id="yBu-Rw-Tkh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="39"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Over" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWv-MT-N92">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="dcT-xC-3AK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.63" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lWv-MT-N92" firstAttribute="leading" secondItem="CeY-Qh-ydi" secondAttribute="leading" constant="108" id="LVK-Ax-aK7"/>
+                                    <constraint firstItem="LWN-Jd-iEO" firstAttribute="top" secondItem="CeY-Qh-ydi" secondAttribute="top" constant="44" id="OgW-JL-Ueu"/>
+                                    <constraint firstItem="LrC-yi-kca" firstAttribute="centerX" secondItem="CeY-Qh-ydi" secondAttribute="centerX" type="default" id="Ozb-C3-vSf"/>
+                                    <constraint firstItem="LrC-yi-kca" firstAttribute="centerY" secondItem="CeY-Qh-ydi" secondAttribute="centerY" type="default" id="cmj-K1-jon"/>
+                                    <constraint firstItem="LrC-yi-kca" firstAttribute="centerX" secondItem="LWN-Jd-iEO" secondAttribute="centerX" type="default" id="ll1-Fc-diE"/>
+                                    <constraint firstItem="lWv-MT-N92" firstAttribute="top" secondItem="LWN-Jd-iEO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nN2-1N-Any"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="usn-PN-8tv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="105" id="1fw-od-xew"/>
                             <constraint firstItem="vUT-mu-Q83" firstAttribute="leading" secondItem="lme-ep-pRV" secondAttribute="leading" type="default" id="4jv-Sv-rJ7"/>
+                            <constraint firstItem="nfR-IE-9sw" firstAttribute="leading" secondItem="usn-PN-8tv" secondAttribute="leading" type="default" id="55j-LZ-wOv"/>
                             <constraint firstAttribute="bottom" secondItem="lme-ep-pRV" secondAttribute="bottom" constant="285" id="7J6-qD-fVX"/>
-                            <constraint firstItem="0KL-oP-jK3" firstAttribute="leading" secondItem="usn-PN-8tv" secondAttribute="leading" type="default" id="J2d-AD-Q3S"/>
-                            <constraint firstItem="lme-ep-pRV" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="12" id="Jo3-1L-P6t"/>
-                            <constraint firstItem="usn-PN-8tv" firstAttribute="top" secondItem="3" secondAttribute="top" constant="103" id="KjW-9M-iEq"/>
-                            <constraint firstItem="0KL-oP-jK3" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="Nc6-jX-DNj"/>
-                            <constraint firstItem="nfR-IE-9sw" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="OX4-vB-nH4"/>
-                            <constraint firstItem="P9n-Lo-Sbh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="218" id="PY0-yN-aAJ"/>
-                            <constraint firstAttribute="trailing" secondItem="lme-ep-pRV" secondAttribute="trailing" constant="218" id="T4h-gt-3k3"/>
-                            <constraint firstItem="nfR-IE-9sw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="355" id="TOZ-f6-xgC"/>
+                            <constraint firstAttribute="bottom" secondItem="nfR-IE-9sw" secondAttribute="bottom" constant="105" id="DmA-gt-YQK"/>
+                            <constraint firstItem="lme-ep-pRV" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="14" id="LCz-ob-94Z"/>
+                            <constraint firstItem="P9n-Lo-Sbh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="216" id="LOh-z9-EEk"/>
+                            <constraint firstItem="usn-PN-8tv" firstAttribute="centerX" secondItem="0KL-oP-jK3" secondAttribute="centerX" type="default" id="MD1-tM-GT7"/>
+                            <constraint firstItem="nfR-IE-9sw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="353" id="N4V-n0-EBh"/>
+                            <constraint firstItem="CeY-Qh-ydi" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="NVi-kO-QyJ"/>
                             <constraint firstItem="cmR-rX-Vhp" firstAttribute="leading" secondItem="P9n-Lo-Sbh" secondAttribute="leading" type="default" id="Xfi-Ut-Ng2"/>
-                            <constraint firstAttribute="bottom" secondItem="usn-PN-8tv" secondAttribute="bottom" constant="355" id="Yue-gi-zK0"/>
                             <constraint firstItem="nfR-IE-9sw" firstAttribute="trailing" secondItem="usn-PN-8tv" secondAttribute="trailing" type="default" id="Z7v-0p-XX4"/>
                             <constraint firstItem="lme-ep-pRV" firstAttribute="top" secondItem="P9n-Lo-Sbh" secondAttribute="top" type="default" id="bWf-Ok-law"/>
                             <constraint firstAttribute="bottom" secondItem="vUT-mu-Q83" secondAttribute="bottom" constant="165" id="btc-WE-9zQ"/>
                             <constraint firstItem="lme-ep-pRV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="173" id="c1G-Gz-eFS"/>
+                            <constraint firstItem="CeY-Qh-ydi" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="e1A-Fe-feI"/>
+                            <constraint firstAttribute="bottom" secondItem="usn-PN-8tv" secondAttribute="bottom" constant="353" id="egM-bJ-ltn"/>
                             <constraint firstItem="cmR-rX-Vhp" firstAttribute="bottom" secondItem="vUT-mu-Q83" secondAttribute="bottom" type="default" id="gRP-tq-DR9"/>
                             <constraint firstItem="cmR-rX-Vhp" firstAttribute="top" secondItem="vUT-mu-Q83" secondAttribute="top" type="default" id="gre-lb-SW1"/>
-                            <constraint firstAttribute="bottom" secondItem="nfR-IE-9sw" secondAttribute="bottom" constant="103" id="j67-qw-Pqd"/>
+                            <constraint firstItem="0KL-oP-jK3" firstAttribute="centerY" secondItem="CeY-Qh-ydi" secondAttribute="centerY" type="default" id="guT-Q3-Imi"/>
+                            <constraint firstItem="0KL-oP-jK3" firstAttribute="centerX" secondItem="CeY-Qh-ydi" secondAttribute="centerX" type="default" id="hhc-SS-Upd"/>
                             <constraint firstItem="vUT-mu-Q83" firstAttribute="top" secondItem="3" secondAttribute="top" constant="293" id="m3u-kE-LZX"/>
-                            <constraint firstAttribute="trailing" secondItem="P9n-Lo-Sbh" secondAttribute="trailing" constant="12" id="oJC-rU-Fjc"/>
+                            <constraint firstItem="CeY-Qh-ydi" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="rhi-5Z-nuA"/>
                             <constraint firstItem="lme-ep-pRV" firstAttribute="bottom" secondItem="P9n-Lo-Sbh" secondAttribute="bottom" type="default" id="sBr-Bp-mgy"/>
                             <constraint firstItem="cmR-rX-Vhp" firstAttribute="trailing" secondItem="P9n-Lo-Sbh" secondAttribute="trailing" type="default" id="sH1-S4-dVN"/>
                             <constraint firstItem="usn-PN-8tv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="115" id="uGM-GU-CPb"/>
+                            <constraint firstAttribute="trailing" secondItem="P9n-Lo-Sbh" secondAttribute="trailing" constant="14" id="wCY-UB-8Gx"/>
+                            <constraint firstItem="CeY-Qh-ydi" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="wJV-9V-vhf"/>
+                            <constraint firstAttribute="trailing" secondItem="lme-ep-pRV" secondAttribute="trailing" constant="216" id="wbx-PW-Z9Z"/>
                             <constraint firstItem="vUT-mu-Q83" firstAttribute="trailing" secondItem="lme-ep-pRV" secondAttribute="trailing" type="default" id="xM9-YV-6JU"/>
-                            <constraint firstItem="0KL-oP-jK3" firstAttribute="leading" secondItem="nfR-IE-9sw" secondAttribute="leading" type="default" id="xaR-8u-pv5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="retryView" destination="CeY-Qh-ydi" id="H7U-zT-oP9"/>
                         <outlet property="startButton" destination="0KL-oP-jK3" id="fvy-AB-TrB"/>
                     </connections>
                 </viewController>
@@ -91,6 +148,26 @@
             <point key="canvasLocation" x="-152" y="70"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ColorPanel" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ColorPanel.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PlayButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayButton.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="generateAndFlash:" candidateClass="UIButton"/>
+                <relationship kind="action" name="resetGame:"/>
+                <relationship kind="outlet" name="retryView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

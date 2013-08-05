@@ -7,10 +7,17 @@
 //
 
 #import "ColorPanel.h"
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @implementation ColorPanel
 {
     UIColor * color;
+    AVAudioPlayer * audioPlayer;
+    NSString * audioPath;
+    NSURL * audioURL;
+    NSArray * arrayOfFiles;
+    
 }
 @synthesize delegate;
 
@@ -27,6 +34,8 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
+        arrayOfFiles = @[@"FirstSound",@"SecondSound",@"ThirdSound",@"FourthSound",@"FifthSound",@"SixthSound"];
+        
         [self.layer setCornerRadius:45];
         color = self.backgroundColor;
         self.layer.borderWidth = 10;
@@ -43,45 +52,45 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-   // self.backgroundColor =  color;
-        [self highlight];
+    [self highlight];
     
 }
+
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.backgroundColor = [UIColor blackColor];
     [UIView animateWithDuration:2 animations:^{
         self.layer.shadowRadius = 0.0f;
     }completion:^(BOOL finished) {
-        [delegate returnTag:self.tag];
+        [delegate returnTagAndSaveTouch:self.tag];
     } ];
 }
 
+-(void)playSound
+{
+    audioPath = [[NSBundle mainBundle] pathForResource:[arrayOfFiles objectAtIndex:self.tag-1] ofType:@".m4a"];
+    audioURL = [NSURL fileURLWithPath:audioPath];
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:audioURL error:nil];
+    
+    [audioPlayer play];
+}
+
+
+
 -(void)highlight
 {
+    [self playSound];
+    
     self.backgroundColor = color;
-    [UIView animateWithDuration:2 animations:^{
-        
+    
+    [UIView animateWithDuration:1.5 animations:^{
         self.layer.shadowRadius = 15.0f;
-        
     } completion:^(BOOL finished) {
-        //[UIView animateWithDuration:6 animations:^{
-            //self.layer.shadowRadius = 1.0f;
-            // self.backgroundColor = [UIColor blackColor];
-        //}];
+        [UIView animateWithDuration:.5 animations:^{
+            self.layer.shadowRadius = 0.0f;
+            self.backgroundColor = [UIColor blackColor];
+        }];
     }];
-/*
-
-    [UIView animateWithDuration:0.25 animations:^{
-        self.alpha = 0.5;
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:.25 animations:^{
-          self.alpha = 1;
-        } completion:^(BOOL finished) {
-            
-        }
-         ];
-    }];*/
 }
 
 @end

@@ -20,6 +20,16 @@
 		8204B74217AAD3CE009DAE26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8204B74117AAD3CE009DAE26 /* ViewController.m */; };
 		8204B74A17AB091C009DAE26 /* ColorPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8204B74917AB091C009DAE26 /* ColorPanel.m */; };
 		8204B74D17ADF53F009DAE26 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8204B74C17ADF53F009DAE26 /* QuartzCore.framework */; };
+		8204B75017AF02F3009DAE26 /* PlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8204B74F17AF02F3009DAE26 /* PlayButton.m */; };
+		8204B75317AF24B6009DAE26 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8204B75217AF24B6009DAE26 /* AVFoundation.framework */; };
+		8204B75B17AF2582009DAE26 /* SecondSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8204B75517AF2582009DAE26 /* SecondSound.m4a */; };
+		8204B75C17AF2582009DAE26 /* SixthSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8204B75617AF2582009DAE26 /* SixthSound.m4a */; };
+		8204B75D17AF2582009DAE26 /* FifthSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8204B75717AF2582009DAE26 /* FifthSound.m4a */; };
+		8204B75E17AF2582009DAE26 /* FourthSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8204B75817AF2582009DAE26 /* FourthSound.m4a */; };
+		8204B75F17AF2582009DAE26 /* ThirdSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8204B75917AF2582009DAE26 /* ThirdSound.m4a */; };
+		8204B76017AF2582009DAE26 /* FirstSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8204B75A17AF2582009DAE26 /* FirstSound.m4a */; };
+		8204B76517AF7C1E009DAE26 /* click2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8204B76317AF7C1E009DAE26 /* click2.mp3 */; };
+		8204B76617AF7C1E009DAE26 /* click1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8204B76417AF7C1E009DAE26 /* click1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +53,17 @@
 		8204B74917AB091C009DAE26 /* ColorPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPanel.m; sourceTree = "<group>"; };
 		8204B74B17ADAF9B009DAE26 /* ColorPanelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPanelDelegate.h; sourceTree = "<group>"; };
 		8204B74C17ADF53F009DAE26 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8204B74E17AF02F3009DAE26 /* PlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayButton.h; sourceTree = "<group>"; };
+		8204B74F17AF02F3009DAE26 /* PlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayButton.m; sourceTree = "<group>"; };
+		8204B75217AF24B6009DAE26 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8204B75517AF2582009DAE26 /* SecondSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = SecondSound.m4a; path = ../../../../../Music/GarageBand/SecondSound.m4a; sourceTree = "<group>"; };
+		8204B75617AF2582009DAE26 /* SixthSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = SixthSound.m4a; path = ../../../../../Music/GarageBand/SixthSound.m4a; sourceTree = "<group>"; };
+		8204B75717AF2582009DAE26 /* FifthSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = FifthSound.m4a; path = ../../../../../Music/GarageBand/FifthSound.m4a; sourceTree = "<group>"; };
+		8204B75817AF2582009DAE26 /* FourthSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = FourthSound.m4a; path = ../../../../../Music/GarageBand/FourthSound.m4a; sourceTree = "<group>"; };
+		8204B75917AF2582009DAE26 /* ThirdSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirdSound.m4a; path = ../../../../../Music/GarageBand/ThirdSound.m4a; sourceTree = "<group>"; };
+		8204B75A17AF2582009DAE26 /* FirstSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = FirstSound.m4a; path = ../../../../../Music/GarageBand/FirstSound.m4a; sourceTree = "<group>"; };
+		8204B76317AF7C1E009DAE26 /* click2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click2.mp3; path = ../../../../../Downloads/click2.mp3; sourceTree = "<group>"; };
+		8204B76417AF7C1E009DAE26 /* click1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click1.mp3; path = ../../../../../Downloads/click1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8204B75317AF24B6009DAE26 /* AVFoundation.framework in Frameworks */,
 				8204B74D17ADF53F009DAE26 /* QuartzCore.framework in Frameworks */,
 				8204B72617AAD3CE009DAE26 /* UIKit.framework in Frameworks */,
 				8204B72817AAD3CE009DAE26 /* Foundation.framework in Frameworks */,
@@ -80,6 +102,7 @@
 		8204B72417AAD3CE009DAE26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8204B75217AF24B6009DAE26 /* AVFoundation.framework */,
 				8204B74C17ADF53F009DAE26 /* QuartzCore.framework */,
 				8204B72517AAD3CE009DAE26 /* UIKit.framework */,
 				8204B72717AAD3CE009DAE26 /* Foundation.framework */,
@@ -91,11 +114,14 @@
 		8204B72B17AAD3CE009DAE26 /* SimonSays */ = {
 			isa = PBXGroup;
 			children = (
+				8204B75417AF2543009DAE26 /* AudioFiles */,
 				8204B73417AAD3CE009DAE26 /* AppDelegate.h */,
 				8204B73517AAD3CE009DAE26 /* AppDelegate.m */,
 				8204B73D17AAD3CE009DAE26 /* MainStoryboard.storyboard */,
 				8204B74017AAD3CE009DAE26 /* ViewController.h */,
 				8204B74117AAD3CE009DAE26 /* ViewController.m */,
+				8204B74E17AF02F3009DAE26 /* PlayButton.h */,
+				8204B74F17AF02F3009DAE26 /* PlayButton.m */,
 				8204B74817AB091C009DAE26 /* ColorPanel.h */,
 				8204B74917AB091C009DAE26 /* ColorPanel.m */,
 				8204B74B17ADAF9B009DAE26 /* ColorPanelDelegate.h */,
@@ -116,6 +142,21 @@
 				8204B73B17AAD3CE009DAE26 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8204B75417AF2543009DAE26 /* AudioFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8204B76317AF7C1E009DAE26 /* click2.mp3 */,
+				8204B76417AF7C1E009DAE26 /* click1.mp3 */,
+				8204B75517AF2582009DAE26 /* SecondSound.m4a */,
+				8204B75617AF2582009DAE26 /* SixthSound.m4a */,
+				8204B75717AF2582009DAE26 /* FifthSound.m4a */,
+				8204B75817AF2582009DAE26 /* FourthSound.m4a */,
+				8204B75917AF2582009DAE26 /* ThirdSound.m4a */,
+				8204B75A17AF2582009DAE26 /* FirstSound.m4a */,
+			);
+			name = AudioFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +215,14 @@
 				8204B73A17AAD3CE009DAE26 /* Default@2x.png in Resources */,
 				8204B73C17AAD3CE009DAE26 /* Default-568h@2x.png in Resources */,
 				8204B73F17AAD3CE009DAE26 /* MainStoryboard.storyboard in Resources */,
+				8204B75B17AF2582009DAE26 /* SecondSound.m4a in Resources */,
+				8204B75C17AF2582009DAE26 /* SixthSound.m4a in Resources */,
+				8204B75D17AF2582009DAE26 /* FifthSound.m4a in Resources */,
+				8204B75E17AF2582009DAE26 /* FourthSound.m4a in Resources */,
+				8204B75F17AF2582009DAE26 /* ThirdSound.m4a in Resources */,
+				8204B76017AF2582009DAE26 /* FirstSound.m4a in Resources */,
+				8204B76517AF7C1E009DAE26 /* click2.mp3 in Resources */,
+				8204B76617AF7C1E009DAE26 /* click1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +237,7 @@
 				8204B73617AAD3CE009DAE26 /* AppDelegate.m in Sources */,
 				8204B74217AAD3CE009DAE26 /* ViewController.m in Sources */,
 				8204B74A17AB091C009DAE26 /* ColorPanel.m in Sources */,
+				8204B75017AF02F3009DAE26 /* PlayButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
